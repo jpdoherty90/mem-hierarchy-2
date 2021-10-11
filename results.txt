@@ -1,0 +1,19 @@
+STARTING:
+BenchmarkMetrics/Average_age-8         	     291	   3,800,928 ns/op
+BenchmarkMetrics/Average_payment-8     	      34	  32,400,437 ns/op
+BenchmarkMetrics/Payment_stddev-8      	      25	  60,374,783 ns/op
+
+AFTER PULLING AGES OUT SEPARATELY:
+BenchmarkMetrics/Average_age-8         	    1459	     818,526 ns/op
+BenchmarkMetrics/Average_payment-8     	      33	  32,766,758 ns/op
+BenchmarkMetrics/Payment_stddev-8      	      16	  65,388,132 ns/op
+
+AFTER SPLITTING OUT PAYMENTS:
+BenchmarkMetrics/Average_age-8         	    1467	     817,665 ns/op
+BenchmarkMetrics/Average_payment-8     	     133	   8,971,272 ns/op
+BenchmarkMetrics/Payment_stddev-8      	      27	  41,290,470 ns/op
+
+AFTER REMOVING USERS FROM STANDARD DEVIATION:
+BenchmarkMetrics/Average_age-8         	    1452	     821,729 ns/op
+BenchmarkMetrics/Average_payment-8     	     133	   8,967,751 ns/op
+BenchmarkMetrics/Payment_stddev-8      	      86	  13,311,080 ns/op
